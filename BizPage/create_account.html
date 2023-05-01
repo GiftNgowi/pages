@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/select2/select2.min.css">
+  <style>
+    body {
+      background-image: url(assets/img/hero-carousel/2.jpg); /* Change this to your desired background image */
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .form-outline {
+      position: relative;
+    }
+    
+    .form-outline label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(15px, 15px);
+      font-size: 16px;
+      color: #999;
+      transition: all 0.2s;
+      pointer-events: none;
+    }
+    
+    .form-control:focus ~ .form-label, .form-control:valid ~ .form-label {
+      transform: translate(10px, -20px);
+      font-size: 12px;
+      color: #1F80C4;
+    }
+    
+    .form-check-label a {
+      color: #1F80C4;
+    }
+    
+    .btn-custom {
+      background-image: linear-gradient(to right, #1F80C4, #73B9FF);
+      border: none;
+      color: #fff;
+      transition: all 0.3s;
+    }
+    
+    .btn-custom:hover {
+      background-image: linear-gradient(to right, #1F80C4 0%, #73B9FF 100%);
+      color: #fff;
+    }
+    
+    @media (max-width: 576px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Registration Form</h1>
+    <!-- Bootstrap alert code -->
+<div class="alert alert-success" id="register-success-alert" style="display: none;">Registered successfully!</div>
+<form id="myform" onsubmit="registerUser(event)">
+  <div class="form-outline mb-4">
+    <input type="text" id="form3Example1cg" class="form-control form-control-lg" required />
+    <label class="form-label" for="form3Example1cg">Username</label>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form3Example2cg" class="form-control form-control-lg" required />
+        <label class="form-label" for="form3Example2cg">First Name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form3Example3cg" class="form-control form-control-lg" required />
+        <label class="form-label" for="form3Example3cg">Middle Name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" required />
+        <label class="form-label" for="form3Example4cdg">Last Name</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" id="form3Example5cg" class="form-control form-control-lg" required />
+    <label class="form-label" for="form3Example6cdg">Registration Number</label>
+  </div>
+ 
+  <!-- <div class="form-outline mb-4">
+    <label class="form-label" for="attributeDropdown" id="attributeLabel">Attribute</label>
+    <select id="attributeDropdown" class="form-select form-select-lg">
+      <option></option>
+      <option value="value1">Value 1</option>
+      <option value="value2">Value 2</option>
+      <option value="value3">Value 3</option>
+      <option value="value4">Value 4</option>
+    </select>
+  </div> -->
+  
+  <div class="form-outline mb-4">
+ 
+   
+      
+      <select name="courses[]" class="js-example-basic-multiple select2 select2-container" multiple="multiple">
+        <option value="AL">Alabama</option>
+          ...
+        <option value="WY">Wyoming</option>
+      </select>
+  </div>
+  
+  
+  
+
+   <div class="form-outline mb-4">
+    <input type="password" id="form3Example6cdg" class="form-control form-control-lg" required />
+    <label class="form-label" for="form3Example6cdg">Password</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="password" id="form3Example6cdg" class="form-control form-control-lg" required />
+    <label class="form-label" for="form3Example6cdg">Repeat your password</label>
+  </div>
+
+
+  <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+  </div>
+
+  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="index.html" class="fw-bold text-body"><u>Login here</u></a></p>
+</form>
+
+
+
+<script>
+  function registerUser(event) {
+    event.preventDefault(); // prevent the form from submitting normally
+    // Your registration logic here
+    // ...
+    // Show the success alert
+    document.getElementById("register-success-alert").style.display = "block";
+    // Clear the form inputs
+    document.getElementById("myform").reset();
+  }
+</script>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="assets/select2/select2.min.js"></script>
+<script src="assets/jquery/jquery-3.6.4.min.js"></script>
+<script>
+
+  
+ $(document).ready(function() {
+  
+      $(".js-example-basic-multiple").select2();
+      
+
+  $('#myform').submit(function(event) {
+    // Stop the form from submitting normally
+    event.preventDefault();
+
+    // Get form data
+    var formData = {
+      username: $('#form3Example1cg').val(),
+      first_name: $('#form3Example2cg').val(),
+      middlename: $('#form3Example3cg').val(),
+      last_name: $('#form3Example4cdg').val(),
+      reg_no: $('#form3Example5cg').val(),
+      password: $('#form3Example6cdg').val(),
+      repeatpassword: $('#form3Example7cdg').val()
+    };
+
+    // var formData = $(this).serializeArray(); // Serialize the form data into an array of objects
+    var jsonData = JSON.stringify(formData); // Convert the array into a JSON string
+
+    // Send form data to API using AJAX
+    $.ajax({
+      type: 'POST',
+      url: 'http://192.168.73.51:8000/add-student',
+      contentType: 'application/json',
+      data: jsonData,
+      dataType: 'json',
+      encode: false
+    })
+    .done(function(data) {
+      console.log(data);
+      alert('Registration successful!');
+    })
+    .fail(function(xhr, textStatus, errorThrown) {
+      console.log(xhr.responseText);
+      alert('Registration failed: ' + errorThrown);
+    });
+  });
+});
+
+</script>
+</body>
+
+</html>

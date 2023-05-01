@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Group 5 project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  .form-outline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-outline label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+</style>
+<script>
+  const form = document.querySelector('#login-form');
+  const usernameInput = document.querySelector('#username');
+  const passwordInput = document.querySelector('#password');
+  const usernameError = document.querySelector('#username-error');
+  const passwordError = document.querySelector('#password-error');
+
+  form.addEventListener('submit', function(event) {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Reset errors
+    usernameError.innerHTML = '';
+    passwordError.innerHTML = '';
+
+    // Validate username
+    if (usernameInput.value.trim() === '') {
+      usernameError.innerHTML = 'Please enter your username';
+      return;
+    }
+
+    // Validate password
+    if (passwordInput.value.trim() === '') {
+      passwordError.innerHTML = 'Please enter your password';
+      return;
+    }
+
+    // Submit form if validation passes
+    form.submit();
+  });
+</script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+          <h1 class="logo"><a href="index.html">SR</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+  <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+  <div class="carousel-inner" role="listbox">
+
+    <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/1.jpg)">
+      <div class="carousel-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">   
+              <div class="about-col">
+                <h2 class="animate__animated animate__fadeInDown">Student Registration system</h2>
+                <p class="animate__animated animate__fadeInUp">Welcome to the student registration system.</p>
+         
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="about-col">
+                <!-- login form -->
+             <div class="card">
+  <div class="card-body py-5 px-md-5">
+    <form id="login-form">
+
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example3">Username</label>
+        <input type="name" id="form3Example3" class="form-control" />
+      </div>
+      
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example4">Password</label>
+        <input type="password" id="form3Example4" class="form-control" />
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Log In
+      </button>
+      
+      <div class="row mb-4">
+        <div class="col">
+          <!-- Simple link -->
+         <a href="create_account.html">Create Account</a>
+
+        </div>
+
+        <div class="col">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+      
+    </form>
+
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/2.jpg)">
+      <div class="carousel-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="animate__animated animate__fadeInDown">The registration begins from 4th/july- 13th/september</h2>
+              <p class="animate__animated animate__fadeInUp">Fill out all the required fields for a better result.</p>
+            </div>
+            <div class="col-md-6">
+              <!-- login form -->
+             <div class="card">
+  <div class="card-body py-5 px-md-5">
+    <form id="login-form">
+
+
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example3">Username</label>
+        <input type="name" id="form3Example3" class="form-control" />
+      </div>
+      
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example4">Password</label>
+        <input type="password" id="form3Example4" class="form-control" />
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Log In
+      </button>
+      
+      <div class="row mb-4">
+        <div class="col">
+          <!-- Simple link -->
+         <a href="create_account.html">Create Account</a>
+
+        </div>
+
+        <div class="col">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+    </div>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    
+   
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>UDOM is Tanzania's leading multidisciplinary university, with more than 13,000 staff and 38,000 students from multiple countries. UDOM was the first university in Tanzania to welcome students of any religion and race.   Empower students to fulfill their academic and professional passion and to have a transformative impact on the society through continual innovation in research and creativity. </p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+              Empowering students to fulfill their academic passion and to have a transformative impact on the society through continual innovation.
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                To become a premier institution of international repute that prepares students for the world and an inclusive society.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+              To positively contribute to the educational, economic, and sustainable development of the local communities and the country at large.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Ngo'ngo'na, Dodoma 7996, Tanzania</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+255 756 565 677</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">group5@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+ 
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Registration</h3>
+            <p> Welcome again to group 5 registration system.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Ngo'ngo'na Street <br>
+              Dodoma, P.O.BOX 5350<br>
+                Tanzania<br>
+              <strong>Phone:</strong> +255 727 889 003<br>
+              <strong>Email:</strong> group5@gmail.com<br>
+            </p>
+
+      
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>The registration begins from 4th/july- 13th/september</p>
+           
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Group 5</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/jquery/jquery-3.6.4.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(()=>{
+      console.log('hello')
+    });
+  </script>
+
+</body>
+
+</html>
